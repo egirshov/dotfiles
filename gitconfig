@@ -1,0 +1,8 @@
+[alias]
+  co = checkout
+  br = branch
+  s = status
+
+[user]
+  name = Eugene Girshov
+  email = egirshov@localhost
