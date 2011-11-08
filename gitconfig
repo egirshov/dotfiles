@@ -6,3 +6,6 @@
 [user]
   name = Eugene Girshov
   email = egirshov@localhost
+
+[color]
+  ui = auto

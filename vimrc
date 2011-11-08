@@ -76,3 +76,12 @@ let g:pymode_run_key = 'R'
 " let g:pymode_lint_cwindow = 1
 " Place error signs
 " let g:pymode_lint_signs = 1
+
+"set incsearch
+"set ignorecase
+"set showmatch
+"nnoremap * *N
+
+autocmd filetype erlang set ts=2
+autocmd filetype erlang set sw=2
+autocmd filetype erlang set noexpandtab
