@@ -14,9 +14,6 @@ autocmd FileType ruby       let g:interpreter="ruby"
 autocmd FileType python     let g:interpreter="python"
 autocmd FileType erlang     let g:interpreter="escript"
 
-" DESC: Set scriptname
-let g:scriptname = expand("<sfile>:t")
-
 " DESC: Set keys
 call helpers#SafeVar("g:anything_run_key", "<leader>r")
 
@@ -32,7 +29,4 @@ fun! anything_run#Run() "{{{
     call helpers#ShowPreviewCmd(g:interpreter . " " . expand("%:p"))
 endfunction "}}}
 
-" DESC: Set commands
-command! -buffer Arun call anything_run#Run()
-
-exe "nnoremap <silent> <buffer> " g:anything_run_key ":Arun<CR>"
+nnoremap <leader>r :call anything_run#Run()<CR>
