@@ -18,14 +18,14 @@ else
   syntax enable
 endif
 
-" Split screen vertically
+" Split screen vertically (also :vsplit or :vs)
 map <F2> <C-w>v
 
 " TODO: Maybe use some NERDTree feature for that
 map <F3> <C-w>v <C-w>w :open .<Enter>
+map <Tab> <C-w>w
 
 map <F9> :set foldmethod=indent<Enter>
-map <Tab> <C-w><C-w>
 
 set pastetoggle=<F4>
 
@@ -37,7 +37,8 @@ call pathogen#infect()
 " call pathogen#helptags()
 
 let mapleader="\\"
-nnoremap <Leader>t :NERDTreeToggle<Enter>
+nnoremap <Leader>t :NERDTree<CR>
+" nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap ; :
 
 " Use normal regexp in search
