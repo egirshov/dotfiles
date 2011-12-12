@@ -18,6 +18,7 @@ fun! anything_run#Interp()
     elseif ft == "ruby" | return "ruby"
     elseif ft == "python" | return "python"
     elseif ft == "erlang" | return "escript"
+    elseif ft == "javascript" | return "node"
     else | return "" | endif
 endfunction
 

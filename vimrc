@@ -1,13 +1,7 @@
-set ts=2
-set sw=2
+" set ts=2
+" set sw=2
 set smartindent
 set expandtab
-
-" Certain language-specific options
-" Note that in case of Python, those will be overriden
-" by Python-Mode settings
-autocmd filetype python set ts=4
-autocmd filetype python set sw=4
 
 set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%\ of\ %L] 
 set laststatus=2
@@ -19,10 +13,10 @@ else
 endif
 
 " Split screen vertically (also :vsplit or :vs)
-map <F2> <C-w>v
+map <F2> :vsplit<CR>
 
 " TODO: Maybe use some NERDTree feature for that
-map <F3> <C-w>v <C-w>w :open .<Enter>
+map <F3> :vsplit<CR> <C-w>w :open .<CR>
 map <Tab> <C-w>w
 
 map <F9> :set foldmethod=indent<Enter>
@@ -38,7 +32,10 @@ call pathogen#infect()
 
 let mapleader="\\"
 nnoremap <Leader>t :NERDTree<CR>
+" or:
 " nnoremap <Leader>t :NERDTreeToggle<CR>
+
+" Avoid using shift-; all the time, just press ;
 nnoremap ; :
 
 " Use normal regexp in search
@@ -82,7 +79,3 @@ let g:pymode_run_key = 'R'
 "set ignorecase
 "set showmatch
 "nnoremap * *N
-
-autocmd filetype erlang set ts=2
-autocmd filetype erlang set sw=2
-autocmd filetype erlang set noexpandtab
