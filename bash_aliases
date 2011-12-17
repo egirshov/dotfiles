@@ -4,4 +4,4 @@ alias stop="kill -SIGSTOP"
 alias cont="kill -SIGCONT"
 alias grpe="grep"
 alias grev="grep -v"
-
+alias svns="svn status | grep -v '.svn'"
