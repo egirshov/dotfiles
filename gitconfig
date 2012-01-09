@@ -2,6 +2,7 @@
   co = checkout
   br = branch
   s = status
+  cp = cherry-pick
 
 [user]
   name = Eugene Girshov

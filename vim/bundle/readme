@@ -3,8 +3,14 @@ extract or git-clone here other Vim plugins:
  * https://github.com/scrooloose/nerdtree.git
  * https://github.com/klen/python-mode.git (up to 0.4.0)
 
- * https://github.com/hallettj/jslint.vim.git
-   or 
-   https://github.com/egirshov/jslint.vim.git
+ * https://github.com/egirshov/jslint.vim.git
+        (forked from https://github.com/hallettj/jslint.vim.git)
 
  * BufExplorer: http://www.vim.org/scripts/script.php?script_id=42
+
+ * https://github.com/vim-scripts/errormarker.vim.git
+
+
+  On Debian6, following additional packages should be installed:
+    * vim-nox (or another 'extended' Vim compiled with Python support)
+    * python-rope
