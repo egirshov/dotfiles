@@ -3,6 +3,7 @@
   br = branch
   s = status
   cp = cherry-pick
+  dt = difftool
 
 [user]
   name = Eugene Girshov
@@ -10,3 +11,9 @@
 
 [color]
   ui = auto
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
