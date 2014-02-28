@@ -6,13 +6,13 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 function review() {
-  [ -z "$1" ] && exit
-  [ -f "$1" ] || exit
-  if [ -f "$1.new" ] ; then
-    vimdiff $1 $1.new
-  else 
-    mv $1 $1.new
-    git checkout $1
-    vimdiff $1 $1.new
+  if [ ! -z "$1" -a -f "$1" ] ; then
+    if [ -f "$1.new" ] ; then
+      vimdiff $1 $1.new
+    else
+      mv $1 $1.new
+      git checkout $1
+      vimdiff $1 $1.new
+    fi
   fi
 }

@@ -1,7 +1,7 @@
 set smartindent
 set expandtab
 
-set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%\ of\ %L] 
+set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%\ of\ %L]
 set laststatus=2
 
 if &diff
@@ -19,11 +19,13 @@ map <F2> :vsplit<CR>
 map <F3> :vsplit<CR> <C-w>w :open .<CR>
 map <Tab> <C-w>w
 
-map <F9> :set foldmethod=indent<Enter>
+map <F8> :set foldmethod=indent<Enter>
+map <F9> :set foldlevel=10<Enter>
 
 set pastetoggle=<F4>
 
 
+#call pathogen#incubate()
 call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 " call pathogen#helptags()
@@ -42,8 +44,13 @@ inoremap jj <Esc>
 
 " Python-Mode plugin:
 
-" Set key 'R' for run python code
-let g:pymode_run_key = 'R'
+" Disable pymode
+"let g:pymode = 0
+"let g:pymode_rope_sorted_completions = 0
+
+" Set a key for runnnig python code
+let g:pymode_run_key = 'r'
+let g:pymode_lint = 1
 
 "set ignorecase
 "set showmatch

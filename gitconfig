@@ -4,6 +4,7 @@
   s = status
   cp = cherry-pick
   dt = difftool
+  grpe = grep
 
 [user]
   name = Eugene Girshov
@@ -13,7 +14,7 @@
   ui = auto
 
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 
 [difftool]
-	prompt = false
+  prompt = no
